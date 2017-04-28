@@ -30,13 +30,7 @@ app.use(function(req, res, next) {
 
 // Routes
 
-app.get('/', function(req, res) {
-    res.render('home');
-});
 
-app.get('/profile', isLoggedIn, function(req, res) {
-    res.render('/profile');
-});
 
 // Controllers
 app.use('/auth', require('./controllers/auth'));
